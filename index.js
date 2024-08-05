@@ -36,10 +36,14 @@ function toggleNavbar() {
 
 
 async function getVideoGames() {
+
+
+  const corsProxyUrl = "https://corsproxy.io/?"
   const url = 'https://www.gamerpower.com/api/giveaways';
 
+  const finishedUrl = corsProxyUrl+url
   try {
-    const response = await fetch(url);
+    const response = await fetch(finishedUrl);
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
