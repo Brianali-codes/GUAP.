@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+#navlist button {
+    font-family: Josefin sans, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    width: 65px;
+}
+
+#Nav {
+    z-index: 999;
+}
+
+#navlist button:hover {
+    font-family: Josefin sans, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    background-color: pink;
+    border-radius: 5px;
+}
+
+#sign-in {
+    font-family: Josefin sans, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 2px;
+    border-radius: 20px;
+    color: black;
+}
+
+#MAIN {
+    height: fit-content;
+    background-image: url(images/GGs.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#NAVBAR {
+    border-radius: 50px;
+    height: 100px;
+}
+
+#Nav {
+    padding: 20px;
+}
+
+#NAV2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: pop 0.2s ease-in;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.99);
+    }
+}
+
+.img {
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#HEADING {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 50px;
+    text-shadow: 1px 1px 1px;
+}
+
+#FH {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 50px;
+}
+
+#DESC {
+    font-family: Josefin sans, monospace;
+    font-size: 17px;
+}
+
+.B1 {
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.B2 {
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.body2 {
+    height: fit-content;
+}
+
+#HEADING2 {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 30px;
+}
+
+#HEADING3 {
+    font-family: Josefin sans, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+
+.MENU {
+    display: none;
+
+}
+
+.MENU:hover {
+    cursor: pointer;
+}
+
+#menupop1 {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 1;
+    right: 0;
+    bottom: 1;
+    width: 60%;
+    height: 100%;
+    background-color: rgba(255, 100, 150, 0.7);
+    gap: 20px;
+    padding: 10px;
+    animation: slide-in-right 0.5s;
+}
+
+#menupop2 {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    background-color: rgba(255, 100, 150, 0.7);
+    top: 0;
+    left: 1;
+    right: 0;
+    bottom: 1;
+    width: 60%;
+    height: 100%;
+    gap: 20px;
+    padding: 10px;
+    animation: slide-in-right 0.5s;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.card-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #666;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 80%;
+    }
+
+    .CARDS {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img1 {
+        display: none;
+    }
+
+    #body2 {
+        text-align: center;
+    }
+
+    .MENU {
+        display: flex;
+    }
+
+    #navlist {
+        display: none;
+    }
+
+    #sign-in {
+        display: none;
+    }
+
+    .HEADER {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-buttons {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #FH {
+        font-size: 20px;
+    }
+
+    #HEADING {
+        font-size: 40px;
+    }
+
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(250px);
+    }
+}
+
+#CONTENT {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+}
+
+#GOTD {
+    width: 90%;
+}
+
+.Game-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out;
+}
+
+#Game-card-image {
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#get-game-key {
+
+    background-color: rgb(248, 114, 136);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:
+        16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    
+}
+
+#get-game-key:hover {
+    background-color: rgb(248, 114, 136);
+    transform: scale(1.05);
+    
+}
+#LP {
+    background-color: rgba(255, 100, 150, 0.7);
+    height: 70vh;
+    
+}
