@@ -111,3 +111,45 @@ async function getVideoGames() {
 
 document.addEventListener("DOMContentLoaded", getVideoGames);
 
+
+document.addEventListener("DOMContentLoaded", function() {
+  let loader = document.getElementById("LOADER");
+  let targetImg = document.getElementById("MAIN1");
+
+  if (loader && targetImg) {
+      targetImg.onload = function() {
+          loader.style.display = "none";
+          console.log("content loaded");
+      };
+  } else {
+      console.error("Either LOADER or MAIN element not found!");
+  }
+  let timeoutId = setTimeout(() => {
+    loader.style.display = "none";
+    console.log("Content loaded after timeout");
+  }, 4000);
+  
+  targetImg.onload = function() {
+    clearTimeout(timeoutId); // Clears the timeout if image loads before timeout
+    loader.style.display = "none";
+    console.log("Content loaded");
+  };
+});
+
+let isContactsVisible = false;
+
+function toggleContacts() {
+    let contactPop = document.getElementById("contacts");
+    let close = document.getElementById("closebutton");
+
+    if (isContactsVisible) {
+        contactPop.style.display = "flex";
+        close.style.display = "flex"
+        isContactsVisible = false;
+    }
+     else {
+        contactPop.style.display = "none";
+        isContactsVisible = true;
+        close.style.display = "none"
+    }
+}
