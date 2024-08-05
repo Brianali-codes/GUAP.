@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="gap-10">
+
+    <div class="loader-container" id="LOADER">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+        <div class="loading-text">Loading...</div>
+    </div>
+
+
     <div id="Nav" class="flex flex-col justify-center">
 
 
@@ -29,11 +38,7 @@
                     </a>
                 </button>
 
-                <button>
-                    <a href="#FOOT">
-                        Contacts
-                    </a>
-                </button>
+                <button onclick="toggleContacts()">Contacts</button>
             </div>
             <div class="flex flex-row">
                 <button id="sign-in" class="w-16">Sign in</button>
@@ -108,7 +113,7 @@
 <!--CONTENT AREA-->
     <div id="CONTENT">
 
-        <div id="MAIN">
+        <div id="MAIN1">
             <div class="flex flex-row justify-center items-center p-8 gap-5" id="LP" >
 
                 <div class="HEADER w-3/6">
@@ -168,13 +173,52 @@
     
         <br><br><br>
     
-        <section class="footer flex flex-row p-5 justify-between" id="FOOT">
-            <p><span id="FH">GUAP</span></p>
-            <div class="flex flex-row justify-center items-center">
+        <section class="footer flex flex-row p-5 justify-between gap-3" id="FOOT">
+
+                <p><span id="FH">GUAP</span></p>
                 <p class=""><span>&#169;</span>2024  All Rights Reserved</p>
-            </div>
+            
+            
+            
             
         </section>
+
+
+        <div id="contacts" class="p-10 flex flex-col justify-between">
+
+            <div class="flex flex-col justify-center items-center gap-3 text-center">
+                <p class="DESC">Brian Ali</p>
+                <p  class="DESC">Tel:0795328270</p>
+                <p  class="DESC">Check out Other projects like this on my github below</p>
+            </div>
+            <div class="cimg p-5 flex flex-col gap-5 text-center">
+                <br>
+                <p  class="DESC">Contact Me on</p>
+
+                <div class="flex flex-row justify-center gap-5">
+                    <a href="">
+                        <img src="images/twitter.png" alt="twitter" class="w-7 h-7">
+                    </a>
+                    <a href="">
+                        <img src="images/github-logo.png" alt="Github" class="w-7 h-7">
+                    </a>
+                    <a href="">
+                        <img src="images/bag.svg" alt="Github" class="w-7 h-7">
+                    </a>
+                    
+                </div>
+                
+            </div>
+            <div>   
+                <p  class="DESC text-center">The GUAP logo is subjected to copyright and may not be reproduced in any way.</p>
+            </div>
+            
+        </div>
+
+        <div class="closebutton" onclick="toggleContacts()" id="closebutton">
+            <img src="images/close.svg" alt="close" class="w-7 h-7">
+        </div>
+
     </div>
     
     <script src="index.js"></script>
