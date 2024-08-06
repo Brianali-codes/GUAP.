@@ -84,6 +84,9 @@ async function getVideoGames() {
       const description = document.createElement('p');
       description.textContent = game.description;
       description.id = 'game-description';
+      description.className = "descr";
+      description.style.fontFamily = "Josefin sans, monospace"
+      description.style.color = "black"
 
       // ... other elements for duration, end date, worth
 
@@ -92,11 +95,12 @@ async function getVideoGames() {
 
       // Create link element and append button within it
       gameLink.href = game.open_giveaway_url;
+      gameLink.target = "_blank"
       gameLink.appendChild(button); // Append button inside the link
 
       card.appendChild(gameLink);
       gameCardsContainer.appendChild(card);
-      card.style.width = "90%"
+      card.style.width = "87%"
       card.style.display = "flex"; 
       card.style.gap = "10px";
       card.style.height = "fit-content";
@@ -105,8 +109,15 @@ async function getVideoGames() {
     });
   } catch (error) {
     console.error('Error fetching Giveaways:', error);
+    
   }
+
+
+ 
+  
+  
 }
+
 
 
 document.addEventListener("DOMContentLoaded", getVideoGames);
@@ -127,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let timeoutId = setTimeout(() => {
     loader.style.display = "none";
     console.log("Content loaded after timeout");
-  }, 4000);
+  }, 1000);
   
   targetImg.onload = function() {
     clearTimeout(timeoutId); // Clears the timeout if image loads before timeout
@@ -153,3 +164,20 @@ function toggleContacts() {
         close.style.display = "none"
     }
 }
+
+let isDarkModeon = true; // Set to true for initial dark mode
+
+function changeDarkMode() {
+  const bg = document.getElementById("BG");
+
+  if (isDarkModeon) { // Check if currently dark mode
+    bg.style.backgroundColor = "rgb(66, 66, 66)";
+  } else {
+    bg.style.backgroundColor = "white";
+  }
+
+  isDarkModeon = !isDarkModeon; 
+}
+
+
+

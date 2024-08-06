@@ -8,7 +8,9 @@ html{
     color: black;
     width: 65px;
 }
-
+#BG{
+    background-color:white;
+}
 #Nav {
     z-index: 999;
 }
@@ -33,7 +35,11 @@ html{
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+#HEADING4{
+    font-family: "Rubik Mono One", monospace;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px;
+}
 #NAVBAR {
     border-radius: 50px;
     height: 100px;
@@ -85,6 +91,7 @@ html{
 .B1 {
     border-width: 1px;
     border-radius: 5px;
+    background-color: white;
 }
 
 .B2 {
@@ -241,6 +248,17 @@ html{
     #HEADING {
         font-size: 40px;
     }
+    .DARKMODE{
+        display:block;
+        position: fixed;
+        top: 1;
+        left: 0;
+        right: 1;
+        bottom: 0;
+        background-color: white;
+        border-radius: 50px;
+    }
+    
 
 }
 
@@ -298,8 +316,7 @@ html{
 
 #get-game-key:hover {
     background-color: rgb(248, 114, 136);
-    transform: scale(1.05);
-    
+    transform: scale(1.02); 
 }
 #LP {
     background-color: rgba(255, 100, 150, 0.7);
@@ -370,3 +387,7 @@ html{
 .closebutton:hover{
     cursor: pointer;
 }
+.DARKMODE{
+    display:block;
+}
+
