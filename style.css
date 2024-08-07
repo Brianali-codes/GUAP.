@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
-html{
+
+html {
     scroll-behavior: smooth;
+    
+}
+html::-webkit-scrollbar {
+    display: none;
 }
 #navlist button {
     font-family: Josefin sans, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: black;
     width: 65px;
 }
-#BG{
-    background-color:white;
+
+#BG {
+    background-color: black;
 }
+
 #Nav {
-    z-index: 999;
+    z-index: 9999;
+    position: sticky;
 }
 
 #navlist button:hover {
@@ -20,6 +28,7 @@ html{
     color: black;
     background-color: pink;
     border-radius: 5px;
+    
 }
 
 #sign-in {
@@ -31,18 +40,20 @@ html{
 
 #MAIN1 {
     height: fit-content;
-    background-image: url(images/GGs.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-#HEADING4{
+
+#HEADING4 {
     font-family: "Rubik Mono One", monospace;
     font-size: 40px;
     text-shadow: 1px 1px 1px;
 }
+
 #NAVBAR {
     border-radius: 50px;
     height: 100px;
+    z-index: 999;
 }
 
 #Nav {
@@ -82,8 +93,12 @@ html{
 #DESC {
     font-family: Josefin sans, monospace;
     font-size: 17px;
+    color: white;
 }
-.DESC{
+.HDNGS{
+    color: white;
+}
+.DESC {
     font-family: Josefin sans, monospace;
     font-size: 17px;
 }
@@ -166,6 +181,7 @@ html{
     align-items: center;
     justify-content: space-between;
     transition: transform 0.2s ease-in-out;
+    z-index: 1;
 }
 
 .card-image {
@@ -197,11 +213,16 @@ html{
     transform: translateY(-20px);
     cursor: pointer;
 }
-
+#IMAGES-GIVE-AWAY{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
 @media (max-width: 768px) {
-    .cimg{
+    .cimg {
         padding: 0px;
     }
+
     .card {
         width: 80%;
     }
@@ -248,8 +269,9 @@ html{
     #HEADING {
         font-size: 40px;
     }
-    .DARKMODE{
-        display:block;
+
+    .DARKMODE {
+        display: block;
         position: fixed;
         top: 1;
         left: 0;
@@ -258,7 +280,11 @@ html{
         background-color: white;
         border-radius: 50px;
     }
-    
+    #IMAGES-GIVE-AWAY{
+        display: flex;
+        flex-direction: column;
+    }
+
 
 }
 
@@ -311,18 +337,20 @@ html{
     cursor: pointer;
     border-radius: 12px;
     transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-    
+
 }
 
 #get-game-key:hover {
     background-color: rgb(248, 114, 136);
-    transform: scale(1.02); 
+    transform: scale(1.02);
 }
+
 #LP {
     background-color: rgba(255, 100, 150, 0.7);
     height: 70vh;
-    
+
 }
+
 #LOADER {
     position: fixed;
     top: 0;
@@ -366,7 +394,8 @@ html{
     font-size: 24px;
     margin-top: 20px;
 }
-#contacts{
+
+#contacts {
     display: none;
     position: fixed;
     top: 20px;
@@ -376,7 +405,8 @@ html{
     background-color: rgba(255, 100, 150, 0.9);
     border-radius: 30px;
 }
-.closebutton{
+
+.closebutton {
     position: fixed;
     top: 30px;
     left: 1;
@@ -384,10 +414,11 @@ html{
     right: 30px;
     display: none;
 }
-.closebutton:hover{
+
+.closebutton:hover {
     cursor: pointer;
 }
-.DARKMODE{
-    display:block;
-}
 
+.DARKMODE {
+    display: block;
+}

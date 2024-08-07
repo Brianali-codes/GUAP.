@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="gap-10" id="BG">
 
     <div class="loader-container" id="LOADER">
@@ -20,15 +22,15 @@
     <div id="Nav" class="flex flex-col justify-center">
 
 
-        <div class="bg-pink-500 flex flex-row justify-between p-5 gap-5" id="NAVBAR"> 
+        <div class="bg-pink-500 flex flex-row justify-between p-5 gap-5" id="NAVBAR">
             <div>
                 <img src="images/guap.png" alt="LOGO" class="w-16">
             </div>
             <div class="flex flex-row justify-center gap-5" id="navlist">
-                
+
                 <button>
                     <a href="#CONTENT">
-                        Home 
+                        Home
                     </a>
                 </button>
 
@@ -42,21 +44,18 @@
 
 
             </div>
-            
 
-            <div class="DARKMODE" onclick="changeDarkMode()" style="padding: 10px; cursor: pointer;">
-                <img src="images/night-mode.png" alt="" style="width: 30px;">
-            </div>
+
 
 
             <div class="MENU w-7 h-7 m-4 hover:cursor-pointer " onclick="toggleNavbar()">
                 <img src="images/menu.png" alt="">
             </div>
             <div id="menupop1">
-                
+
                 <button>
                     <a href="#CONTENT">
-                        Home 
+                        Home
                     </a>
                 </button>
 
@@ -68,20 +67,20 @@
 
                 <button onclick="toggleContacts()">Contacts</button>
                 <br><br><br>
-                <button onclick="toggleNavbar()"class="border-2 border-black border-solid">close</button>
+                <button onclick="toggleNavbar()" class="border-2 border-black border-solid">close</button>
             </div>
         </div>
 
 
-        <div class="bg-pink-500 flex flex-row justify-between p-5 gap-5" id="NAV2"> 
-            
+        <div class="bg-pink-500 flex flex-row justify-between p-5 gap-5" id="NAV2">
+
             <div>
                 <img src="images/guap.png" alt="LOGO" class="w-16">
             </div>
             <div class="flex flex-row justify-center gap-5" id="navlist">
                 <button>
                     <a href="#CONTENT">
-                        Home 
+                        Home
                     </a>
                 </button>
 
@@ -93,10 +92,8 @@
 
                 <button onclick="toggleContacts()">Contacts</button>
             </div>
+
             
-            <div class="DARKMODE" onclick="changeDarkMode()" style="padding: 10px; cursor: pointer;">
-                <img src="images/night-mode.png" alt="" style="width: 30px;">
-            </div>
 
 
             <div class="MENU w-7 h-7 m-4" onclick="toggleNavbar()">
@@ -106,7 +103,7 @@
             <div id="menupop2">
                 <button>
                     <a href="#CONTENT">
-                        Home 
+                        Home
                     </a>
                 </button>
 
@@ -131,24 +128,28 @@
 
 
 
-<!--CONTENT AREA-->
+    <!--CONTENT AREA-->
     <div id="CONTENT">
 
         <div id="MAIN1">
-            <div class="flex flex-row justify-center items-center p-8 gap-5" id="LP" >
+            <div class="flex flex-row justify-center items-center p-8 gap-5 bg-pink-500" id="LP">
 
                 <div class="HEADER w-3/6">
-                    <p id="HEADING" class="HDNGS">Explore <span class="text-white">GUAP</span> Find The Best Gaming Giveaways</p>
-                    <p id="DESC">GUAP is a free video game hunting website that hunts for free video games and giveaways from the web, no matter your choice of gaming device we have you covered, we get giveaways,free games,steam keys and in game loot for you for free.</p>
+                    <p id="HEADING" class="HDNGS">Explore <span class="text-white">GUAP</span> Find The Best Gaming
+                        Giveaways</p>
+                    <p id="DESC">GUAP is a free video game hunting website that hunts for free video games and giveaways
+                        from the web, no matter your choice of gaming device we have you covered, we get giveaways,free
+                        games,steam keys and in game loot for you for free.</p>
                     <br>
                     <div class="nav-buttons flex flex-row gap-2">
                         <a href="#HEADING">
                             <button class="B1 bg-white border-2 border-pink-500 border-solid p-3 rounded-xl"">View Games</button>
                         </a>
                         
-                        <button class="B2 border-2 border-black border-solid p-3 rounded-xl hover:bg-pink-500 transition-all" onclick="toggleContacts()">Contact Me</button>
+                        <button class=" B2 border-2 border-black border-solid p-3 rounded-xl hover:bg-pink-500
+                                transition-all" onclick="toggleContacts()">Contact Me</button>
                     </div>
-                </div>    
+                </div>
             </div>
 
         </div>
@@ -157,52 +158,53 @@
         <p id="HEADING4" class="HDNGS text-center">Latest Giveaways.</p>
 
         <div class="flex flex-col justify-center items-center text-center gap-5" id="IMAGES-GIVE-AWAY">
-                    
+
         </div>
 
         <div class="body2 flex flex-col justify-center items-center text-center" id="ABOUT">
-            <p id="HEADING2" class="HDNGS">GUAP (Get Up And Play)</p>
-            <p id="HEADING3" class="HDNGS"> Utilizes the Gamepower.com video game API that hosts any of the latest giveaways from different platforms such as steam and epic games, </p>
+            <p id="HEADING2" class="HDNGS">GUAP (Giveaway Update App Platform)</p>
+            <p id="HEADING3" class="HDNGS"> Utilizes the Gamepower.com video game API that hosts any of the latest
+                giveaways from different platforms such as steam and epic games, </p>
             <br><br>
             <div class="CARDS flex flex-row justify-center items-center">
-    
+
                 <div class="card">
                     <img src="images/AND.png" alt="Card Image" class="card-image w-12">
                     <div class="card-content">
-                      <h2 class="card-title">Android</h2>
-                      <p class="card-description">Android giveaways</p>
+                        <h2 class="card-title">Android</h2>
+                        <p class="card-description">Android giveaways</p>
                     </div>
                 </div>
-    
+
                 <div class="card">
                     <img src="images/windows.png" alt="Card Image" class="card-image w-12">
                     <div class="card-content">
-                      <h2 class="card-title">Windows</h2>
-                      <p class="card-description">Windows Pc giveaways</p>
+                        <h2 class="card-title">Windows</h2>
+                        <p class="card-description">Windows Pc giveaways</p>
                     </div>
                 </div>
-    
+
                 <div class="card">
                     <img src="images/console.jpg" alt="Card Image" class="card-image w-12">
                     <div class="card-content">
-                      <h2 class="card-title">Console</h2>
-                      <p class="card-description">Console keys and game giveaways</p>
+                        <h2 class="card-title">Console</h2>
+                        <p class="card-description">Console keys and game giveaways</p>
                     </div>
                 </div>
-    
-    
+
+
             </div>
-    
+
         </div>
-    
+
         <br><br><br>
-    
+
         <section class="footer flex flex-row p-5 justify-between gap-3" id="FOOT">
 
-                <p><span id="FH">GUAP</span></p>
-                <p class=""><span>&#169;</span>2024  All Rights Reserved</p>
-                   
-            
+            <p><span id="FH" style="color: white;">GUAP</span></p>
+            <p style="color: white;"><span>&#169;</span>2024 All Rights Reserved</p>
+
+
         </section>
 
 
@@ -210,12 +212,12 @@
 
             <div class="flex flex-col justify-center items-center gap-3 text-center">
                 <p class="DESC">Brian Ali</p>
-                <p  class="DESC">Tel:0795328270</p>
-                <p  class="DESC">Check out Other projects like this on my github below</p>
+                <p class="DESC">Tel:0795328270</p>
+                <p class="DESC">Check out Other projects like this on my github below</p>
             </div>
             <div class="cimg p-5 flex flex-col gap-5 text-center">
                 <br>
-                <p  class="DESC">Contact Me on</p>
+                <p class="DESC">Contact Me on</p>
 
                 <div class="flex flex-row justify-center gap-5">
                     <a href="">
@@ -227,37 +229,25 @@
                     <a href="">
                         <img src="images/bag.svg" alt="Github" class="w-7 h-7">
                     </a>
-                    
+
                 </div>
-                
-            </div>
-            <div>   
-                <p  class="DESC text-center">The GUAP logo is subjected to copyright and may not be reproduced in any way.</p>
-            </div>
-            
-        </div>
 
-        <div class="closebutton" onclick="toggleContacts()" id="closebutton">
-            <img src="images/close.svg" alt="close" class="w-7 h-7">
-        </div>
+            </div>
+            <div>
+                <p class="DESC text-center">The GUAP logo is subjected to copyright and may not be reproduced in any
+                    way.</p>
+            </div>
 
+        </div>
     </div>
 
 
 
-    
+
 
 
 
     <script src="index.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
