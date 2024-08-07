@@ -72,6 +72,7 @@ async function getVideoGames() {
       // Apply styles (assuming these are the desired styles)
       button.style.backgroundColor = 'transparent';
       button.style.color = 'white';
+      button.classList.add('Game-button')
       button.style.borderWidth = '1px'
       button.style.borderColor = "white"
       button.style.padding = '15px 32px';
@@ -95,29 +96,16 @@ async function getVideoGames() {
       const GameTitle = document.createElement('p');
 
       GameTitle.textContent = game.title
-      GameTitle.style.color = "pink"
+      GameTitle.style.color = "cyan"
       GameTitle.style.textTransform = "uppercase"
       GameTitle.style.fontFamily = "impact"
       GameTitle.style.fontSize = "20px"
-
-      AccessInfo.textContent = game.type;
-
-      if (AccessInfo.textContent.trim() === "Early Access") {
-        AcessDiv.backgroundColor = "red";
-        AccessInfo.style.fontSize = "15px";
-      } else if (AccessInfo.textContent.trim() === "Game") {
-        AcessDiv.backgroundColor = "green";
-      } else if (AccessInfo.textContent.trim() === "DLC") {
-        AcessDiv.backgroundColor = "pink";
-      }
-      console.log(game.type)
-
 
       Worth.style.position = "absolute"
       Worth.style.top = "0"
       Worth.style.fontSize = "20px"
       Worth.style.right = "0"
-      Worth.style.backgroundColor = "pink"
+      Worth.style.backgroundColor = "cyan"
       Worth.textContent = `Save ${game.worth}`
       Worth.style.padding = "5px"
       Worth.style.fontFamily = "Josefin sans"
@@ -150,7 +138,7 @@ async function getVideoGames() {
       }
       console.log(game.type)
 
-      AccessInfo.style.backgroundColor = "rgba(255, 100, 150, 0.7)"
+      AccessInfo.style.backgroundColor = "#008B8B"
       description.textContent = game.description;
       description.id = 'game-description';
       description.className = "descr";
@@ -190,7 +178,8 @@ async function getVideoGames() {
       card.style.overflowY = "scroll"
       card.style.scrollbarWidth = "none"
       card.style.position = "relative"
-      console.log(game)
+      card.style.border = "none"
+      card.style.backgroundColor = "black"
     });
   } catch (error) {
     console.error('Error fetching Giveaways:', error);
@@ -249,5 +238,6 @@ function toggleContacts() {
     close.style.display = "none"
   }
 }
+
 
 
