@@ -249,7 +249,9 @@ html::-webkit-scrollbar {
     .cimg {
         padding: 0px;
     }
-
+    #HEADING4{
+        font-size: 35px;
+    }
     .card {
         width: 80%;
     }
@@ -376,6 +378,9 @@ html::-webkit-scrollbar {
 #LP {
     background-color: #008B8B;
     height:fit-content;
+    background-image: url(images/Ggs.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #LOADER {
