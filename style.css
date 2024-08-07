@@ -294,7 +294,7 @@ html::-webkit-scrollbar {
     }
 
     #HEADING {
-        font-size: 40px;
+        font-size: 32px;
     }
 
     .DARKMODE {
@@ -325,6 +325,7 @@ html::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     gap: 200px;
+    margin-top: 10px;
 }
 
 #GOTD {

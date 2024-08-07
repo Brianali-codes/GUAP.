@@ -171,10 +171,9 @@ async function getVideoGames() {
       card.style.width = "90%"
       card.style.display = "flex";
       card.style.gap = "10px";
-      card.style.height = "fit-content";
       card.style.justifyContent = "space-between";
       card.style.padding = "5px"
-      card.style.height = "450px"
+      card.style.height = "500px"
       card.style.overflowY = "scroll"
       card.style.scrollbarWidth = "none"
       card.style.position = "relative"
