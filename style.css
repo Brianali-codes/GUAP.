@@ -375,7 +375,7 @@ html::-webkit-scrollbar {
 
 #LP {
     background-color: #008B8B;
-    height: 70vh;
+    height:fit-content;
 }
 
 #LOADER {
