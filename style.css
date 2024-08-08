@@ -84,7 +84,7 @@ html::-webkit-scrollbar {
 #HEADING {
     font-family: "Rubik Mono One", monospace;
     font-size: 50px;
-    text-shadow: 1px 1px 1px;
+    text-shadow: 1px 1px 1px black;
 }
 
 #FH {
@@ -153,9 +153,9 @@ html::-webkit-scrollbar {
     left: 1;
     right: 0;
     bottom: 1;
-    width: 60%;
+    width: 80%;
     height: 100%;
-    background-color: rgba(255, 100, 150, 0.7);
+    background-color: #008B8B;
     gap: 20px;
     padding: 10px;
     animation: slide-in-right 0.5s;
@@ -164,13 +164,13 @@ html::-webkit-scrollbar {
 #menupop2 {
     display: none;
     position: fixed;
+    width: 80%;
     flex-direction: column;
-    background-color: rgba(255, 100, 150, 0.7);
+    background-color: #008B8B;
     top: 0;
     left: 1;
     right: 0;
     bottom: 1;
-    width: 60%;
     height: 100%;
     gap: 20px;
     padding: 10px;
@@ -217,14 +217,11 @@ html::-webkit-scrollbar {
     color: #666;
 }
 .Game-card{
-    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1), 0px 6px 20px rgba(255, 255, 255, 0.15);
-    border-color: white;
-    border-width: 3px;
+    background-color: rgb(29, 29, 29);    
 }
 .Game-card:hover{
     cursor: pointer;
     box-shadow: 0px 4px 5px 1px #008B8B, 0px 6px 20px 10px rgba(255, 255, 255, 0.15);
-    background-color: #353535;
 }
 .card:hover {
     transform: translateY(-20px);
@@ -237,12 +234,12 @@ html::-webkit-scrollbar {
     gap: 1px;
     
 }
+
 .Game-button:hover{
-    background-color: pink;
-    transition: all ease-in;
+    background-color: #008B8B;
 }
 #MAINER{
-    border: solid 1px white;
+    box-shadow: 0px 4px 5px 1px #008B8B, 0px 6px 20px 10px rgba(255, 255, 255, 0.15);
     border-radius: 5px;
 }
 @media (max-width: 768px) {
@@ -312,6 +309,9 @@ html::-webkit-scrollbar {
     #IMAGES-GIVE-AWAY{
         display: flex;
         flex-direction: column;
+    }
+    .Game-card{
+        height: fit-content;
     }
 
 
@@ -434,7 +434,7 @@ html::-webkit-scrollbar {
     left: 20px;
     bottom: 20px;
     right: 20px;
-    background-color: rgba(255, 100, 150, 0.9);
+    background-color: #008B8B;
     border-radius: 30px;
     z-index: 9999;
 }

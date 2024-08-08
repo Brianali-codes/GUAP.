@@ -45,7 +45,7 @@ async function getVideoGames() {
 
   const corsProxyUrl = "https://corsproxy.io/?"
   const url = 'https://www.gamerpower.com/api/giveaways?'
-  const PF = platform;
+  const PF = platform;//unused for now untill sort logic is added.
 
   const finishedUrl = corsProxyUrl + url
   try {
@@ -56,129 +56,116 @@ async function getVideoGames() {
     }
 
     const data = await response.json();
-    const gameCardsContainer = document.getElementById("IMAGES-GIVE-AWAY"); // Choose this container consistently
+    const gameCardsContainer = document.getElementById("IMAGES-GIVE-AWAY"); 
 
     data.forEach(game => {
       const card = document.createElement('div');
       card.classList.add('Game-card');
-
+      
       const image = document.createElement('img');
       const button = document.createElement('button');
-      const gameLink = document.createElement('a');
+button.classList.add('Game-button');
 
-      // Set button text content (optional)
-      button.textContent = "Get Now"; // Adjust as needed
+const gameLink = document.createElement('a');  
 
-      // Apply styles (assuming these are the desired styles)
+// Set button text content (optional)
+button.textContent = "Get Now"; 
+
+// Add event listener for mouseover
+button.addEventListener('mouseover', () => {
+  button.style.backgroundColor = "#008B8B";
+  button.style.color = "black"
+  button.style.width = "100%"
+  button.textContent = "Get it now →"; 
+});
+
+button.addEventListener('mouseout', () => {
+  button.style.backgroundColor = ""; // Reset to default color
+  button.style.color = "white"
+  button.textContent = "Get Now"; 
+});
+
+//variables declarations//
+const description = document.createElement('p');
+const AccessInfo = document.createElement('p');
+const AcessDiv = document.createElement('div');
+const Worth = document.createElement('p');
+const GameTitle = document.createElement('p');
+
+
       button.style.backgroundColor = 'transparent';
       button.style.color = 'white';
-      button.classList.add('Game-button')
-      button.style.borderWidth = '1px'
-      button.style.borderColor = "white"
+      button.style.borderWidth = '2px'
+      button.style.width = "100%"
+      button.style.borderColor = "#008B8B"
       button.style.padding = '15px 32px';
       button.style.textAlign = 'center';
       button.style.textDecoration = 'none';
       button.style.display = 'inline-block';
-      button.style.fontSize = '16px';
+      button.style.fontSize = '12px';
       button.style.margin = '4px 2px';
       button.style.cursor = 'pointer';
       button.style.borderRadius = '12px';
       button.style.transition = 'background-color 0.3s ease-in-out, transform 0.2s ease-in-out';
-      image.src = game.image || game.thumbnail; // Use image if available, fallback to thumbnail
+      image.src = game.image || game.thumbnail; // I Used the image if available if not fallback to thumbnail
       image.alt = game.title;
       image.className = 'game-card-image';
-      image.style.objectFit = "cover"; // Add for image scaling
+      image.style.objectFit = "cover"; // Added for better image scaling
       image.style.height = "50%"
-      const description = document.createElement('p');
-      const AccessInfo = document.createElement('p');
-      const AcessDiv = document.createElement('div');
-      const Worth = document.createElement('p');
-      const GameTitle = document.createElement('p');
-
       GameTitle.textContent = game.title
       GameTitle.style.color = "cyan"
       GameTitle.style.textTransform = "uppercase"
       GameTitle.style.fontFamily = "impact"
       GameTitle.style.fontSize = "20px"
-
       Worth.style.position = "absolute"
       Worth.style.top = "0"
-      Worth.style.fontSize = "20px"
+      Worth.style.fontSize = "15px"
       Worth.style.right = "0"
       Worth.style.backgroundColor = "cyan"
       Worth.textContent = `Save ${game.worth}`
       Worth.style.padding = "5px"
       Worth.style.fontFamily = "Josefin sans"
-
       AcessDiv.style.display = "flex"
       AcessDiv.style.flexDirection = "row"
       AcessDiv.style.justifyContent = "space-between"
       AcessDiv.style.alignItems = "center"
       AcessDiv.style.width = "100%"
-      AcessDiv.style.border = "solid"
-      AcessDiv.style.borderRadius = "10px"
-      AcessDiv.style.borderWidth = "1px"
       AccessInfo.style.padding = '15px 32px';
       AccessInfo.style.margin = '4px 2px';
       AccessInfo.style.cursor = 'pointer';
       AccessInfo.style.borderRadius = '12px';
-
-
-
-      
       AccessInfo.textContent = game.type;
-
-      if (AccessInfo.textContent.trim() === "Early Access") {
-        AcessDiv.backgroundColor = "red";
-        AccessInfo.style.fontSize = "15px";
-      } else if (AccessInfo.textContent.trim() === "Game") {
-        AcessDiv.backgroundColor = "green";
-      } else if (AccessInfo.textContent.trim() === "DLC") {
-        AcessDiv.backgroundColor = "pink";
-      }
-      console.log(game.type)
-
+      AccessInfo.style.fontSize = "12px"
       AccessInfo.style.backgroundColor = "#008B8B"
       description.textContent = game.description;
       description.id = 'game-description';
       description.className = "descr";
       description.style.fontFamily = "Josefin sans, monospace"
       description.style.color = "white"
-
+      description.style.cursor = "auto"
       // ... other elements for duration, end date, worth
-
       card.appendChild(image);
       card.appendChild(GameTitle);
       card.appendChild(description);
       card.appendChild(AcessDiv);
-
       AcessDiv.appendChild(AccessInfo);
       AcessDiv.appendChild(gameLink);
-
-      // Create link element and append button within it
       gameLink.href = game.open_giveaway_url;
       gameLink.target = "_blank"
       gameLink.appendChild(button); // Append button inside the link
-
       card.appendChild(AcessDiv);
       card.appendChild(Worth);
-
-
       gameCardsContainer.appendChild(card);
-
-
-
       card.style.width = "90%"
       card.style.display = "flex";
       card.style.gap = "10px";
       card.style.justifyContent = "space-between";
       card.style.padding = "5px"
-      card.style.height = "500px"
+      card.style.height = "450px"
       card.style.overflowY = "scroll"
       card.style.scrollbarWidth = "none"
       card.style.position = "relative"
       card.style.border = "none"
-      card.style.backgroundColor = "black"
     });
   } catch (error) {
     console.error('Error fetching Giveaways:', error);
