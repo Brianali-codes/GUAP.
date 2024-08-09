@@ -44,12 +44,12 @@ async function getVideoGames() {
 
 
   const corsProxyUrl = "https://corsproxy.io/?"
-  const url = 'https://www.gamerpower.com/api/giveaways?'
+  const url = 'https://www.gamerpower.com/api/giveaways'
   const PF = platform;//unused for now untill sort logic is added.
 
   const finishedUrl = corsProxyUrl + url
   try {
-    const response = await fetch(finishedUrl);
+    const response = await fetch(finishedUrl,{ cache: 'no-cache' }); 
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -76,7 +76,7 @@ button.addEventListener('mouseover', () => {
   button.style.backgroundColor = "#008B8B";
   button.style.color = "black"
   button.style.width = "100%"
-  button.textContent = "Get it now →"; 
+  button.textContent = "Get now →"; 
 });
 
 button.addEventListener('mouseout', () => {
@@ -166,6 +166,17 @@ const GameTitle = document.createElement('p');
       card.style.scrollbarWidth = "none"
       card.style.position = "relative"
       card.style.border = "none"
+      card.style.boxShadow = "0px 2px 4px rgba(0, 0, 0, 0.9)"
+      card.style.backgroundColor = "#2F2D2E"
+
+      card.addEventListener('mouseover', () => {
+        card.style.backgroundColor = "#3b3a3b"
+        card.style.boxShadow = "0px 4px 5px 1px #008B8B, 0px 6px 20px 10px rgba(255, 255, 255, 0.15)" 
+      });
+      card.addEventListener('mouseout', () => {
+        card.style.backgroundColor = "#2F2D2E"
+        card.style.boxShadow = "0px 2px 4px rgba(0, 0, 0, 0.9)" 
+      });      
     });
   } catch (error) {
     console.error('Error fetching Giveaways:', error);
