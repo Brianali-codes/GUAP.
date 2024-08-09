@@ -44,7 +44,7 @@ async function getVideoGames() {
 
 
   const corsProxyUrl = "https://corsproxy.io/?"
-  const url = 'https://www.gamerpower.com/api/giveaways'
+  const url = 'https://www.gamerpower.com/api/giveaways?sort-by=date'
   const PF = platform;//unused for now untill sort logic is added.
 
   const finishedUrl = corsProxyUrl + url
@@ -57,7 +57,7 @@ async function getVideoGames() {
 
     const data = await response.json();
     const gameCardsContainer = document.getElementById("IMAGES-GIVE-AWAY"); 
-
+    console.log(data)
     data.forEach(game => {
       const card = document.createElement('div');
       card.classList.add('Game-card');
