@@ -57,7 +57,8 @@ async function getVideoGames() {
 
     const data = await response.json();
     const gameCardsContainer = document.getElementById("IMAGES-GIVE-AWAY"); 
-    console.log(data)
+    
+
     data.forEach(game => {
       const card = document.createElement('div');
       card.classList.add('Game-card');
@@ -237,4 +238,42 @@ function toggleContacts() {
 }
 
 
+async function EstimateWorth(){
 
+  let WorthMessage = document.getElementById("games-worth")
+  let NoOfGiveaways = document.getElementById("games-no")
+
+  const url = 'https://gamerpower.com/api/worth/'
+  const corsProxyUrl = "https://api.codetabs.com/v1/proxy?quest="
+  const finishedUrl = corsProxyUrl+url
+
+  try {
+
+    const response = await fetch(finishedUrl,{ cache: 'no-cache' }); 
+    const data = await response.json();
+
+    console.log(data)
+  
+    WorthMessage.textContent = `Save on $ ${data.worth_estimation_usd}`
+    WorthMessage.style.color = "cyan"
+    WorthMessage.style.fontFamily = "josefin sans, impact, monospace"
+    WorthMessage.style.fontSize = "30px"
+
+    NoOfGiveaways.textContent = `Active giveaways ${data.active_giveaways_number}`
+    NoOfGiveaways.style.color = "cyan"
+    NoOfGiveaways.style.fontFamily = "josefin sans, impact, monospace"
+    NoOfGiveaways.style.fontSize = "30px"
+
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    
+  } catch (error) {
+    console.error('Error fetching games worth:', error);
+
+  }
+
+}
+EstimateWorth()

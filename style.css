@@ -17,7 +17,13 @@ html::-webkit-scrollbar {
 #BG {
     background-color: #2F2D2E;
 }
-
+#gameworth{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow:  2px 4px 0px rgba(0, 0, 0, 0.9);
+    padding: 5px;
+}
 #Nav {
     z-index: 999;
     position: sticky;
