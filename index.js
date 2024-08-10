@@ -162,8 +162,8 @@ const GameTitle = document.createElement('p');
       card.style.gap = "10px";
       card.style.justifyContent = "space-between";
       card.style.padding = "5px"
-      card.style.height = "450px"
-      card.style.overflowY = "scroll"
+      card.style.height = "470px"
+      card.style.overflowY = "scroll" 
       card.style.scrollbarWidth = "none"
       card.style.position = "relative"
       card.style.border = "none"
@@ -255,13 +255,13 @@ async function EstimateWorth(){
     console.log(data)
   
     WorthMessage.textContent = `Save on a total of $ ${data.worth_estimation_usd}`
-    WorthMessage.style.color = "#008B8B"
+    WorthMessage.style.color = "black"
     WorthMessage.style.fontFamily = "josefin sans, impact, monospace"
     WorthMessage.style.fontSize = "30px"
     
 
-    NoOfGiveaways.textContent = `Active giveaways ${data.active_giveaways_number}.`
-    NoOfGiveaways.style.color = "#008B8B"
+    NoOfGiveaways.textContent = `Active giveaways Today: ${data.active_giveaways_number}.`
+    NoOfGiveaways.style.color = "black"
     NoOfGiveaways.style.fontFamily = "josefin sans, impact, monospace"
     NoOfGiveaways.style.fontSize = "30px"
 

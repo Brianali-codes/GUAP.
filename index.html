@@ -42,7 +42,7 @@
                     </a>
                 </button>
 
-                <button onclick="toggleContacts()">Contacts</button>
+                <button onclick="toggleContacts()">Newsletter</button>
 
 
             </div>
@@ -67,7 +67,7 @@
                     </a>
                 </button>
 
-                <button onclick="toggleContacts()">Contacts</button>
+                <button onclick="toggleContacts()">Newsletter</button>
                 <br><br><br>
                 <button onclick="toggleNavbar()" class="border-2 border-black border-solid">close</button>
             </div>
@@ -92,7 +92,7 @@
                     </a>
                 </button>
 
-                <button onclick="toggleContacts()">Contacts</button>
+                <button onclick="toggleContacts()">Newsletter</button>
             </div>
 
             
@@ -115,8 +115,9 @@
                     </a>
                 </button>
 
-                <button onclick="toggleContacts()">Contacts</button>
+                <button onclick="toggleContacts()">Newsletter</button>
                 <br><br><br>
+
                 <button onclick="toggleNavbar()" class="border-2 border-black border-solid">close</button>
             </div>
 
@@ -134,7 +135,7 @@
     <div id="CONTENT">
 
         <div id="MAIN1">
-            <div class="flex flex-row justify-center items-center p-8 gap-5 bg-pink-500" id="LP">
+            <div class="flex flex-row justify-center items-center p-8 gap-5" id="LP">
 
                 <div class="HEADER w-3/6">
                     <p id="HEADING" class="HDNGS">Explore <span class="text-white">GUAP</span> Find The Best Gaming
@@ -153,7 +154,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
 
@@ -163,6 +163,7 @@
 
             <div id="gameworth">
                 <p id="games-worth" class="HDNGS">.</p>
+                <p><span id="FH" style="color: #008B8B;">GUAP</span></p>
                 <p id="games-no" class="HDNGS">.</p>
             </div>
             
@@ -224,7 +225,7 @@
         </section>
 
 
-        <div id="contacts" class="p-10 flex flex-col justify-between">
+        <div id="contacts" class="p-10 flex flex-col" style="justify-content: center;align-items: center;">
 
             <div class="flex flex-col justify-center items-center gap-3 text-center">
                 <p class="DESC">Brian Ali</p>
@@ -252,6 +253,24 @@
             <div>
                 <p class="DESC text-center">The GUAP logo is subjected to copyright and may not be reproduced in any
                     way.</p>
+
+
+
+            </div>
+
+
+
+
+            <form action="https://formsubmit.co/brianali427@gmail.com" method="POST" id="Newsletter">
+                <input type="email" name="email" required id="displayer" placeholder="subscribe for weekly newsletter">
+                <button type="submit" class="sender">subscribe</button>
+            </form>
+
+
+
+
+            <div onclick="toggleContacts()" id="closebutton">
+                <img src="images/close.svg" alt="close" >
             </div>
 
         </div>
