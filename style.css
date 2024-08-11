@@ -277,6 +277,17 @@ html::-webkit-scrollbar {
     #HEADING4{
         font-size: 35px;
     }
+    #gameworth{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0px 2px 2px  rgba(0, 0, 0, 0.9);
+        padding: 15px;
+        width: 100%;
+        border: solid;
+        border-color: #008B8B;
+        
+    }
     .card {
         width: 80%;
     }
