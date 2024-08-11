@@ -404,7 +404,7 @@ html::-webkit-scrollbar {
 }
 
 #LP {
-    background : linear-gradient(to bottom, rgba(112, 111, 111, 0.1), rgb(7, 7, 7));
+    background : linear-gradient(to bottom, rgba(145, 144, 144, 0.1), #008B8B);
     height:fit-content;
 }
 
