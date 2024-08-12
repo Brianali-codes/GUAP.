@@ -126,7 +126,7 @@ html::-webkit-scrollbar {
 }
 
 #MAIN1 {
-    background-image: url(images/GG3.jpg);
+    background-image: url(images/GG3.webp);
     height: fit-content;
     background-repeat: no-repeat;
     background-size: cover;
@@ -135,7 +135,7 @@ html::-webkit-scrollbar {
 #HEADING4 {
     font-family: "Rubik Mono One", monospace;
     font-size: 40px;
-    text-shadow: 1px 1px 1px;
+    text-shadow: 1px 1px 1px black;
     color: #008B8B;
     text-transform: capitalize;
 }
@@ -357,7 +357,19 @@ html::-webkit-scrollbar {
     .card {
         width: 80%;
     }
-
+    #game-sorter{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center ;
+        box-shadow: 0px 2px 2px  rgba(0, 0, 0, 0.9);
+        padding: 15px;
+        width: 100%;
+        animation :pop 1s;  
+    }
+    .sort-button{
+        width: 100%;
+    }
     .CARDS {
         display: flex;
         flex-direction: column;

@@ -160,12 +160,20 @@ const GameTitle = document.createElement('p');
       card.appendChild(AcessDiv);
       card.appendChild(Worth);
       gameCardsContainer.appendChild(card);
-      card.style.width = "90%"
+      card.style.width = "87%"
       card.style.display = "flex";
       card.style.gap = "10px";
       card.style.justifyContent = "space-between";
       card.style.padding = "5px"
-      card.style.height = "470px"
+      function adjustCardHeight() {
+        if (window.innerWidth < 768) {
+          card.style.height = "fit-content"; 
+        } else {
+          card.style.height = "500px"; 
+        }
+      }
+      adjustCardHeight();
+      window.addEventListener("resize", adjustCardHeight);
       card.style.overflowY = "scroll" 
       card.style.scrollbarWidth = "none"
       card.style.position = "relative"
