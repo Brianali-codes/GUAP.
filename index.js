@@ -1,8 +1,8 @@
 const triggerElement = document.getElementById("NAVBAR")
 const NAV2 = document.getElementById("NAV2")
 const NAV3 = document.getElementById("NAV3")
-
-
+//     ["?sort-by=value","?sort-by=date","?sort-by=popularity"]    //  the main sorting choices
+let choice = "?sort-by=date"
 //sorting controls//
 let defaultSort = "giveaways"
 let platform = ""
@@ -38,16 +38,19 @@ function toggleNavbar() {
     isNavbarVisible = true;
   }
 }
+  
+
 
 
 async function getVideoGames() {
 
 
   const corsProxyUrl = "https://corsproxy.io/?"
-  const url = 'https://www.gamerpower.com/api/giveaways?sort-by=date'
-  const PF = platform;//unused for now untill sort logic is added.
+  const url = 'https://www.gamerpower.com/api/giveaways'
+  
 
-  const finishedUrl = corsProxyUrl + url
+  const finishedUrl = corsProxyUrl + url + choice
+
   try {
     const response = await fetch(finishedUrl,{ cache: 'no-cache' }); 
 
@@ -123,7 +126,7 @@ const GameTitle = document.createElement('p');
       Worth.style.fontSize = "15px"
       Worth.style.right = "0"
       Worth.style.backgroundColor = "cyan"
-      Worth.textContent = `Save ${game.worth}`
+      Worth.textContent = `Was ${game.worth} now $0`
       Worth.style.padding = "5px"
       Worth.style.fontFamily = "Josefin sans"
       AcessDiv.style.display = "flex"
@@ -219,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 });
 
-let isContactsVisible = false;
+let isContactsVisible = true;
 
 function toggleContacts() {
   let contactPop = document.getElementById("contacts");
@@ -278,3 +281,38 @@ async function EstimateWorth(){
 
 }
 EstimateWorth()
+
+
+
+let isSortAvail = true; // I Initially set it to true to mimic an already true state for the sort button.
+
+function toggleSorter() {
+  let sort = document.getElementById("game-sorter");
+
+  if (isSortAvail) {
+    sort.style.display = "flex";
+    isSortAvail = false;
+  } else {
+    sort.style.display = "none";
+    isSortAvail = true;
+  }
+}
+
+function sortBydate(){
+    document.getElementById("IMAGES-GIVE-AWAY").innerHTML = ""
+    choice = "?sort-by=date";
+    getVideoGames();
+}
+function sortByValue(){
+    document.getElementById("IMAGES-GIVE-AWAY").innerHTML = ""
+    choice = "?sort-by=value";
+    getVideoGames();
+}
+function sortByPopularity(){
+    document.getElementById("IMAGES-GIVE-AWAY").innerHTML = ""
+    choice = "?sort-by=popularity";
+    getVideoGames();
+}
+
+
+

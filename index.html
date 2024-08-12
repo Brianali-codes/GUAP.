@@ -157,15 +157,29 @@
         </div>
 
 
+
+
+
+
        <div style="display: flex;flex-direction: column;gap: 70px;" id="MAINER">    
 
             <p id="HEADING4" class="HDNGS text-center" style="margin-top: 50px;">Latest Giveaways.</p>
 
-            <div id="gameworth">
-                <p id="games-worth" class="HDNGS">.</p>
-                <p><span id="FH" style="color: #008B8B;">GUAP</span></p>
-                <p id="games-no" class="HDNGS">.</p>
+            <div class="mainworth">
+                <div id="gameworth">
+                    <p id="games-worth" class="HDNGS">.</p>
+                    <p id="games-sort" class="HDNGS" onclick="toggleSorter()">Sort</p>
+                    <p id="games-no" class="HDNGS">.</p>
+                </div>
+
+                <div id="game-sorter">
+                    <button class="sort-button" id="datesort" onclick="sortBydate()">Date</button>
+                    <button class="sort-button" id="valuesort" onclick="sortByValue()">Value</button>
+                    <button class="sort-button" id="popusort" onclick="sortByPopularity()">Popularity</button>
+                </div>
+
             </div>
+            
             
             <div class="flex flex-col justify-center items-center text-center gap-5" id="IMAGES-GIVE-AWAY">
                 
@@ -173,6 +187,9 @@
             </div>
 
        </div>
+
+
+
        
 
         <div class="body2 flex flex-col justify-center items-center text-center" id="ABOUT">
@@ -262,6 +279,7 @@
 
 
             <form action="https://formsubmit.co/brianali427@gmail.com" method="POST" id="Newsletter">
+                <input type="hidden" name="_autoresponse" value="Hello there Welcome to guap giveaways">
                 <input type="email" name="email" required id="displayer" placeholder="subscribe for weekly newsletter">
                 <button type="submit" class="sender">subscribe</button>
             </form>
