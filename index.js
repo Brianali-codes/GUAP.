@@ -324,3 +324,7 @@ function sortByPopularity(){
 
 
 
+function subscribe(){
+    document.getElementById("sub").textContent = "Wait..."
+}
+
