@@ -372,6 +372,9 @@ html::-webkit-scrollbar {
     #Newsletter{
         width: 90%;
     }
+    #games-sort{
+        width: 100%;
+    }
     .cimg {
         padding: 0px;
     }
