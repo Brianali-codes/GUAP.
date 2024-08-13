@@ -213,20 +213,17 @@ document.addEventListener("DOMContentLoaded", function () {
   if (loader && targetImg) {
     targetImg.onload = function () {
       loader.style.display = "none";
-      console.log("content loaded");
     };
   } else {
-    console.error("Either LOADER or MAIN element not found!");
+    console.error
   }
   let timeoutId = setTimeout(() => {
     loader.style.display = "none";
-    console.log("Content loaded after timeout");
   }, 1000);
 
   targetImg.onload = function () {
     clearTimeout(timeoutId); // most useless inmplementation to make the user think they have fast internet
     loader.style.display = "none";
-    console.log("Content loaded");
   };
 });
 
@@ -262,9 +259,6 @@ async function EstimateWorth(){
 
     const response = await fetch(finishedUrl,{ cache: 'no-cache' }); 
     const data = await response.json();
-
-    console.log(data)
-  
     WorthMessage.textContent = `Save on a total of $ ${data.worth_estimation_usd}`
     WorthMessage.style.color = "black"
     WorthMessage.style.fontFamily = "josefin sans, impact, monospace"
