@@ -1,6 +1,9 @@
 const triggerElement = document.getElementById("NAVBAR")
+const triggerElement2 = document.getElementById("CONTENT")
 const NAV2 = document.getElementById("NAV2")
 const NAV3 = document.getElementById("NAV3")
+const upToTop = document.getElementById("UPTOP")
+
 //     ["?sort-by=value","?sort-by=date","?sort-by=popularity"]    //  the main sorting choices
 let choice = "?sort-by=date"
 //sorting controls//
@@ -11,16 +14,46 @@ let platform = ""
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
-      NAV2.style.display = 'flex'; // Show search bar
-
+      NAV2.style.display = 'flex'; // Show navbar
+      upToTop.style.display = 'flex';//show up to top button when user goes down
     } else {
-      NAV2.style.display = 'none'; // Hide search bar
-
-    }
+      NAV2.style.display = 'none'; // Hide navbar
+      upToTop.style.display = 'flex';//hide uptotop button.
+    } 
   });
 });
 
 observer.observe(triggerElement);
+
+
+
+
+const myElement = document.getElementById("NAVBAR");
+const myButton = document.getElementById('UPTOP');
+
+let isShown = false;
+
+window.addEventListener('scroll', () => {
+  const elementRect = myElement.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  if (elementRect.top < windowHeight && !isShown) {
+    myButton.style.display = 'block';
+    isShown = true;
+  } else if (window.scrollY === 0) {
+    myButton.style.display = 'none';
+    isShown = false;
+  }
+});
+
+
+
+
+
+
+
+
+
 
 let isNavbarVisible = false;
 

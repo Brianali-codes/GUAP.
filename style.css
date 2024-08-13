@@ -29,6 +29,23 @@ html::-webkit-scrollbar {
 #BG {
     background-color: #2F2D2E;
 }
+#UPTOTOP{
+    width: 40px;
+    animation: shake 1s ;
+}
+#UPTOP:hover{
+    cursor: pointer;
+    animation: shake 1s ;
+}
+#UPTOP{
+    display: none;
+    position: fixed;
+    top: 1;
+    bottom: 20px;
+    right: 20px;
+    left: 1;
+    padding: 2px;
+}
 #gameworth{
     display: flex;
     flex-direction: row;
@@ -551,6 +568,12 @@ html::-webkit-scrollbar {
     to {
         transform: rotate(360deg);
     }
+}
+
+@keyframes shake{
+    0%{transform: translateY(-10px);}
+    50%{transform: translateY(10px);}
+    100%{transform: translateY(0px);}
 }
 
 .loading-text {
