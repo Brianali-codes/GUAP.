@@ -1,1 +1,1 @@
-giveaways for gamers using the gamepower API
+Giveaways for gamers using the gamepower API
