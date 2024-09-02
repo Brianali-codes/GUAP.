@@ -348,7 +348,11 @@ function sortByPopularity(){
     choice = "?sort-by=popularity";
     getVideoGames();
 }
-
+function sortByAll(){
+  document.getElementById("IMAGES-GIVE-AWAY").innerHTML = ""
+  choice = "";
+  getVideoGames();
+}
 
 
 function subscribe(){
