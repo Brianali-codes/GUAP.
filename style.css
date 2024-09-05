@@ -471,7 +471,37 @@ html::-webkit-scrollbar {
 
 
 }
-
+.COOKIE_BAR{
+    background-color: #008B8B;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    top: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#TCS{
+    color: cyan;
+}
+#ACCEPT{
+    background-color: cyan;
+    padding: 10px;
+    border: solid;
+    border-color: transparent;
+    border-width: 1px;
+    transition: 0.3s;
+}
+#ACCEPT:hover{
+    background-color: transparent;
+    border-color: black;
+    transition: 0.3s;
+    
+}
 @keyframes slide-in-right {
     from {
         transform: translateX(250px);

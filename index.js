@@ -193,7 +193,7 @@ const GameTitle = document.createElement('p');
       card.appendChild(AcessDiv);
       card.appendChild(Worth);
       gameCardsContainer.appendChild(card);
-      card.style.width = "87%"
+      card.style.width = "90%"
       card.style.display = "flex";
       card.style.gap = "10px";
       card.style.justifyContent = "space-between";
@@ -354,8 +354,9 @@ function sortByAll(){
   getVideoGames();
 }
 
-
-function subscribe(){
-    document.getElementById("sub").textContent = "Wait..."
+function toggleCookieBar(){
+    document.querySelector(".COOKIE_BAR").style.display = "none"
 }
+
+
 
