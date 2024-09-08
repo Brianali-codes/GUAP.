@@ -3,4 +3,4 @@ Giveaways for gamers using the gamepower API
 video game giveaways and more at your fingertips
 
 Example Template:
-![Screenshot (32)](https://github.com/user-attachments/assets/592f0efa-4c40-458f-a7fb-185f9401f428)&border-radius=20px
+![Screenshot (32)](https://github.com/user-attachments/assets/592f0efa-4c40-458f-a7fb-185f9401f428)
