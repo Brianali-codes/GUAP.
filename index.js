@@ -47,14 +47,6 @@ window.addEventListener('scroll', () => {
 });
 
 
-
-
-
-
-
-
-
-
 let isNavbarVisible = false;
 
 function toggleNavbar() {
@@ -71,8 +63,11 @@ function toggleNavbar() {
     isNavbarVisible = true;
   }
 }
-  
-
+//added event listeners for collapsing the popup after its clicked
+let popup1 = document.getElementById("menupop1");
+let popup2 = document.getElementById("menupop2");
+popup1.addEventListener('click', toggleNavbar)
+popup2.addEventListener('click', toggleNavbar)
 
 
 async function getVideoGames() {
