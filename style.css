@@ -3,17 +3,20 @@
 
 html {
     scroll-behavior: smooth;
-    
+
 }
+
 html::-webkit-scrollbar {
     display: none;
 }
+
 #navlist button {
     font-family: Josefin sans, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: black;
     width: 65px;
 }
-#Newsletter{
+
+#Newsletter {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -26,18 +29,22 @@ html::-webkit-scrollbar {
     border-radius: 20px;
     margin-top: 20px;
 }
+
 #BG {
     background-color: #2F2D2E;
 }
-#UPTOTOP{
+
+#UPTOTOP {
     width: 40px;
-    animation: shake 1s ;
+    animation: shake 1s;
 }
-#UPTOP:hover{
+
+#UPTOP:hover {
     cursor: pointer;
-    animation: shake 1s ;
+    animation: shake 1s;
 }
-#UPTOP{
+
+#UPTOP {
     display: none;
     position: fixed;
     top: 1;
@@ -46,16 +53,18 @@ html::-webkit-scrollbar {
     left: 1;
     padding: 2px;
 }
-#gameworth{
+
+#gameworth {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    box-shadow: 0px 2px 2px  rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
     padding: 15px;
     width: 100%;
 
 }
-#games-worth{
+
+#games-worth {
     background-color: #008B8B;
     padding: 3px;
     border-radius: 5px;
@@ -66,7 +75,8 @@ html::-webkit-scrollbar {
     border: solid;
     border-color: black;
 }
-#games-sort{
+
+#games-sort {
     background-color: #008B8B;
     padding: 3px;
     border-radius: 5px;
@@ -81,7 +91,8 @@ html::-webkit-scrollbar {
     border: solid;
     border-color: black;
 }
-#games-no{
+
+#games-no {
     background-color: #008B8B;
     padding: 3px;
     border-radius: 5px;
@@ -107,35 +118,39 @@ html::-webkit-scrollbar {
     width: 20%;
     font-family: josefin sans, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25px;
-  }
-  .sort-button:hover{
+}
+
+.sort-button:hover {
     background-color: #02b4b4;
-  }
-#game-sorter{
+}
+
+#game-sorter {
     display: none;
     flex-direction: row;
     justify-content: space-between;
-    box-shadow: 0px 2px 2px  rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
     padding: 15px;
     width: 100%;
-    animation :pop 1s;
-    
+    animation: pop 1s;
+
 }
 
-.mainworth{
+.mainworth {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0px 2px 2px  rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
     padding: 15px;
     width: 100%;
     border: solid;
     border-color: #008B8B;
 }
-#gameworth p{
+
+#gameworth p {
     cursor: pointer;
     background-color: #02b4b4;
 }
+
 #Nav {
     z-index: 999;
     position: sticky;
@@ -216,9 +231,11 @@ html::-webkit-scrollbar {
     font-size: 17px;
     color: white;
 }
-.HDNGS{
+
+.HDNGS {
     color: white;
 }
+
 .DESC {
     font-family: Josefin sans, monospace;
     font-size: 17px;
@@ -238,9 +255,11 @@ html::-webkit-scrollbar {
     border-color: #ffffff;
     color: white;
 }
-.B2:hover{
+
+.B2:hover {
     background-color: #008B8B;
 }
+
 .body2 {
     height: fit-content;
 }
@@ -272,7 +291,7 @@ html::-webkit-scrollbar {
     left: 1;
     right: 0;
     bottom: 1;
-    width: 80%;
+    width: 50%;
     height: 100%;
     background-color: #008B8B;
     gap: 20px;
@@ -283,7 +302,7 @@ html::-webkit-scrollbar {
 #menupop2 {
     display: none;
     position: fixed;
-    width: 80%;
+    width: 50%;
     flex-direction: column;
     background-color: #008B8B;
     top: 0;
@@ -295,7 +314,55 @@ html::-webkit-scrollbar {
     padding: 10px;
     animation: slide-in-right 0.5s;
 }
-
+#Admin_Login{
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    animation: appear 0.5s;
+}
+#LOGIN{
+    background-color: cyan;
+    padding: 10px;
+    border-radius: 2px;
+}
+.inputslogin{
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    background-color: transparent;
+    height: 50px;
+    padding: 10px;
+}
+.inputslogin::placeholder{
+    color: black;
+}
+#AdminToggler{
+    padding: 10px;
+    background-color: #02b4b4;
+    border-radius: 2px;
+    border-color: black;
+    border-width: 1px;
+}
+#adminUploads{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-width: 1px;
+    border-color: black;
+    padding: 10px;
+    animation: appear 0.5s;
+}
+#Upload{
+    padding: 10px;
+    background-color: #02b4b4;
+    border-radius: 2px;
+    border-color: black;
+    border-width: 1px;
+}
 .card {
     width: 300px;
     height: 400px;
@@ -335,79 +402,106 @@ html::-webkit-scrollbar {
     font-size: 14px;
     color: #666;
 }
-.Game-card{
-    background-color: rgb(29, 29, 29);    
+
+.Game-card {
+    background-color: rgb(29, 29, 29);
 }
-.Game-card:hover{
+
+.Game-card:hover {
     cursor: pointer;
 }
+
 .card:hover {
     transform: translateY(-20px);
     cursor: pointer;
     box-shadow: 0px 4px 8px 10px rgba(255, 0, 0, 0.1), 0px 6px 20px 10px rgba(255, 255, 255, 0.15);
 }
-#IMAGES-GIVE-AWAY{
+
+#IMAGES-GIVE-AWAY {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1px;
-    
+
 }
 
-.Game-button:hover{
+.Game-button:hover {
     background-color: #008B8B;
 }
-#MAINER{
+
+#MAINER {
     box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.9);
     border-radius: 5px;
 }
-#HLS{
+
+#HLS {
     background-image: url(images/GG2.webp);
     background-repeat: no-repeat;
     background-size: cover;
 }
-#HLS2{
-    background : linear-gradient(to bottom, rgba(145, 144, 144, 0.1), #008B8B);
-}   
+
+#HLS2 {
+    background: linear-gradient(to bottom, rgba(145, 144, 144, 0.1), #008B8B);
+}
+
 @media (max-width: 768px) {
-    #Newsletter{
+    #Newsletter {
         width: 90%;
     }
-    #games-sort{
+    #AdminToggler{
+        margin-top: -70px; 
+    }
+    #Admin_Login{
+        flex-direction: column;
+        gap: 5px;
+        margin-top: -50px;
+        padding: 1px;
+    }
+    #adminUploads{
+        flex-direction: column;
+    }
+    #games-sort {
         width: 100%;
     }
+
     .cimg {
         padding: 0px;
     }
-    #HEADING4{
+
+    #HEADING4 {
         font-size: 35px;
     }
-    #gameworth{
+
+    #gameworth {
         display: flex;
         flex-direction: column;
         align-items: center;
-        box-shadow: 0px 2px 2px  rgba(0, 0, 0, 0.9);
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
         padding: 15px;
         width: 100%;
         border: solid;
         border-color: #008B8B;
-        
+
     }
+
     .card {
         width: 80%;
     }
-    #game-sorter{
+
+    #game-sorter {
         display: none;
         flex-direction: column;
         justify-content: center;
-        align-items:center ;
-        box-shadow: 0px 2px 2px  rgba(0, 0, 0, 0.9);
+        align-items: center;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
         padding: 15px;
         width: 100%;
-        animation :pop 1s;  
+        animation: pop 1s;
     }
-    .sort-button{
+
+    .sort-button {
         width: 100%;
     }
+
     .CARDS {
         display: flex;
         flex-direction: column;
@@ -461,17 +555,20 @@ html::-webkit-scrollbar {
         background-color: white;
         border-radius: 50px;
     }
-    #IMAGES-GIVE-AWAY{
+
+    #IMAGES-GIVE-AWAY {
         display: flex;
         flex-direction: column;
     }
-    .Game-card{
+
+    .Game-card {
         height: fit-content;
     }
 
 
 }
-.COOKIE_BAR{
+
+.COOKIE_BAR {
     background-color: #008B8B;
     display: flex;
     flex-direction: row;
@@ -485,10 +582,12 @@ html::-webkit-scrollbar {
     left: 0;
     right: 0;
 }
-#TCS{
+
+#TCS {
     color: cyan;
 }
-#ACCEPT{
+
+#ACCEPT {
     background-color: cyan;
     padding: 10px;
     border: solid;
@@ -496,12 +595,14 @@ html::-webkit-scrollbar {
     border-width: 1px;
     transition: 0.3s;
 }
-#ACCEPT:hover{
+
+#ACCEPT:hover {
     background-color: transparent;
     border-color: black;
     transition: 0.3s;
-    
+
 }
+
 @keyframes slide-in-right {
     from {
         transform: translateX(250px);
@@ -561,8 +662,8 @@ html::-webkit-scrollbar {
 }
 
 #LP {
-    background : linear-gradient(to bottom, rgba(145, 144, 144, 0.1), #008B8B);
-    height:fit-content;
+    background: linear-gradient(to bottom, rgba(145, 144, 144, 0.1), #008B8B);
+    height: fit-content;
 }
 
 #LOADER {
@@ -603,10 +704,18 @@ html::-webkit-scrollbar {
     }
 }
 
-@keyframes shake{
-    0%{transform: translateY(-10px);}
-    50%{transform: translateY(10px);}
-    100%{transform: translateY(0px);}
+@keyframes shake {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .loading-text {
@@ -615,14 +724,15 @@ html::-webkit-scrollbar {
     margin-top: 20px;
 }
 
-#displayer{
+#displayer {
     height: 50px;
     background-color: transparent;
     width: 100%;
     outline: none;
 
 }
-.sender{
+
+.sender {
     border: solid;
     border-width: 1px;
     background-color: #008B8B;
@@ -630,18 +740,22 @@ html::-webkit-scrollbar {
     padding: 5px;
     border-radius: 5px;
 }
-.sender:hover{
+
+.sender:hover {
     background-color: cyan;
 }
-#displayer::placeholder{
+
+#displayer::placeholder {
     color: black;
     background-color: transparent;
     outline: none;
 }
-#displayer:focus{
+
+#displayer:focus {
     background-color: transparent;
     border-radius: 10px;
 }
+
 #contacts {
     display: none;
     position: fixed;
@@ -676,3 +790,16 @@ html::-webkit-scrollbar {
 .DARKMODE {
     display: block;
 }
+
+
+@keyframes appear{
+    from{transform: translateY(-10px);}
+    to{transform: translateY(0px);}
+}
+
+
+
+
+
+
+
