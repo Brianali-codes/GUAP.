@@ -387,5 +387,5 @@ function auth(){
     window.alert("Wrong Password!!!")
   }
 }
-
+//I Used a lot of inline styles in this one :) It still helped me learn how to fecth and use Apis for things i enjoy doing.
 
