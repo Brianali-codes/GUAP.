@@ -15,7 +15,9 @@ html::-webkit-scrollbar {
     color: black;
     width: 65px;
 }
-
+#I2{
+    background-color: #008B8B;
+}
 #Newsletter {
     display: flex;
     flex-direction: row;
@@ -29,7 +31,16 @@ html::-webkit-scrollbar {
     border-radius: 20px;
     margin-top: 20px;
 }
-
+#StealthLogin{
+    background-color: transparent;
+    color: #008B8B;
+    padding: 5px;
+}
+#StealthLogin:hover{
+    background-color: cyan;
+    color: black;
+    cursor: pointer;
+}
 #BG {
     background-color: #2F2D2E;
 }

@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CATALOG</title>
+    <title>AdminPage.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
 </head>
-<body>
-    
+<body id="I2" class="flex flex-col justify-center items-center p-5">
+
+        <div class="flex flex-col justify-center items-center">
+
+            <button onclick="adminShow()" id="AdminToggler">ADMIN LOGIN</button>
+            <br><br>
+            
+            <div id="Admin_Login">
+
+                <input type="text" class="inputslogin" id="USERNAME" placeholder="Admin Username">
+                <input type="text" class="inputslogin" id="PASSWD" placeholder="Admin password">
+                <button id="LOGIN" onclick="auth()">Admin Log In</button>
+            </div>
+            
+            <div id="adminUploads">
+                <input type="file">
+                <button id="Upload" >Upload Newsletter</button>
+            </div>  
+        </div>
+            
+
+    <script src="index.js"></script>
 </body>
 </html>
