@@ -234,6 +234,8 @@ async function getVideoGames() {
 document.addEventListener("DOMContentLoaded", getVideoGames);
 
 //function for disappearing loading screen after website launch
+
+
 document.addEventListener("DOMContentLoaded", function () {
   let loader = document.getElementById("LOADER");
   let targetImg = document.getElementById("MAIN1");
@@ -285,7 +287,7 @@ async function EstimateWorth() {
 
   try {
 
-    const response = await fetch(finishedUrl, { cache: 'no-cache' });
+    const response = await fetch(finishedUrl, { cache: 'no-cache' }); // done in order to remove errors partaining cors policies, damn these cors took a sweat outa me, sadly when one uses cors plicies websites they cant make their product commercial or production ready!!!
     const data = await response.json();
     WorthMessage.textContent = `Save on a total of $ ${data.worth_estimation_usd}`
     WorthMessage.style.color = "black"
