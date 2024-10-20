@@ -73,20 +73,21 @@ popup2.addEventListener('click', toggleNavbar)
 async function getVideoGames() {
 
 
-  const corsProxyUrl = "https://corsproxy.io/?"
-  const url = 'https://www.gamerpower.com/api/giveaways'
+  const url = 'http://localhost:3000/api/giveaways'
 
-
-  const finishedUrl = corsProxyUrl + url + choice
+  const options = {
+    method: 'GET',
+  };
 
   try {
-    const response = await fetch(finishedUrl, { cache: 'no-cache' });
+    const response = await fetch(url, options);
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
     const data = await response.json();
+    console.log(data)
     const gameCardsContainer = document.getElementById("IMAGES-GIVE-AWAY");
 
 
@@ -141,9 +142,7 @@ async function getVideoGames() {
       button.style.transition = 'background-color 0.3s ease-in-out, transform 0.2s ease-in-out';
       image.src = game.image || game.thumbnail; // I Used the image if available if not fallback to thumbnail
       image.alt = game.title;
-      image.className = 'game-card-image';
-      image.style.objectFit = "cover"; // Added for better image scaling
-      image.style.height = "50%"
+      image.classList.add = 'game-card-image';
       GameTitle.textContent = game.title
       GameTitle.style.color = "cyan"
       GameTitle.style.textTransform = "uppercase"
