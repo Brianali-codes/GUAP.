@@ -73,21 +73,20 @@ popup2.addEventListener('click', toggleNavbar)
 async function getVideoGames() {
 
 
-  const url = 'http://localhost:3000/api/giveaways'
+  const corsProxyUrl = "https://corsproxy.io/?"
+  const url = 'https://www.gamerpower.com/api/giveaways'
 
-  const options = {
-    method: 'GET',
-  };
+
+  const finishedUrl = corsProxyUrl + url + choice
 
   try {
-    const response = await fetch(url, options);
+    const response = await fetch(finishedUrl, { cache: 'no-cache' });
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
     const data = await response.json();
-    console.log(data)
     const gameCardsContainer = document.getElementById("IMAGES-GIVE-AWAY");
 
 
@@ -142,7 +141,9 @@ async function getVideoGames() {
       button.style.transition = 'background-color 0.3s ease-in-out, transform 0.2s ease-in-out';
       image.src = game.image || game.thumbnail; // I Used the image if available if not fallback to thumbnail
       image.alt = game.title;
-      image.classList.add = 'game-card-image';
+      image.className = 'game-card-image';
+      image.style.objectFit = "cover"; // Added for better image scaling
+      image.style.height = "50%"
       GameTitle.textContent = game.title
       GameTitle.style.color = "cyan"
       GameTitle.style.textTransform = "uppercase"
@@ -389,4 +390,3 @@ function auth(){
   }
 }
 //I Used a lot of inline styles in this one :) It still helped me learn how to fecth and use Apis for things i enjoy doing.
-
