@@ -141,9 +141,7 @@ async function getVideoGames() {
       button.style.transition = 'background-color 0.3s ease-in-out, transform 0.2s ease-in-out';
       image.src = game.image || game.thumbnail; // I Used the image if available if not fallback to thumbnail
       image.alt = game.title;
-      image.classList.add = 'game-card-image';
-      image.style.objectFit = "cover"; // Added for better image scaling
-      image.style.height = "50%"
+      image.classList.add = 'Game-card-image';
       GameTitle.textContent = game.title
       GameTitle.style.color = "cyan"
       GameTitle.style.textTransform = "uppercase"
