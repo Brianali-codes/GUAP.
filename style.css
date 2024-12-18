@@ -643,7 +643,7 @@ html::-webkit-scrollbar {
     transition: transform 0.2s ease-in-out;
 }
 
-#Game-card-image {
+.Game-card-image {
     width: 100%;
     object-fit: cover;
     border-top-left-radius: 5px;
