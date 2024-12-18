@@ -89,6 +89,7 @@ async function getVideoGames() {
     const data = await response.json();
     const gameCardsContainer = document.getElementById("IMAGES-GIVE-AWAY");
 
+    console.log(data)
 
     data.forEach(game => {
       const card = document.createElement('div');
@@ -101,7 +102,7 @@ async function getVideoGames() {
       const gameLink = document.createElement('a');
 
       // Set button text content (optional)
-      button.textContent = "Get Now";
+      button.textContent = "Free";
 
       // Add event listener for mouseover
       button.addEventListener('mouseover', () => {
@@ -114,7 +115,7 @@ async function getVideoGames() {
       button.addEventListener('mouseout', () => {
         button.style.backgroundColor = ""; // Reset to default color
         button.style.color = "white"
-        button.textContent = "Get Now";
+        button.textContent = "Free";
       });
 
       //variables declarations//
@@ -146,15 +147,7 @@ async function getVideoGames() {
       GameTitle.style.color = "cyan"
       GameTitle.style.textTransform = "uppercase"
       GameTitle.style.fontFamily = "impact"
-      GameTitle.style.fontSize = "20px"
-      Worth.style.position = "absolute"
-      Worth.style.top = "0"
-      Worth.style.fontSize = "15px"
-      Worth.style.right = "0"
-      Worth.style.backgroundColor = "cyan"
-      Worth.textContent = `Was ${game.worth} now $0`
-      Worth.style.padding = "5px"
-      Worth.style.fontFamily = "Josefin sans"
+      GameTitle.style.fontSize = "22px"
       AcessDiv.style.display = "flex"
       AcessDiv.style.flexDirection = "row"
       AcessDiv.style.justifyContent = "space-between"
@@ -164,9 +157,10 @@ async function getVideoGames() {
       AccessInfo.style.margin = '4px 2px';
       AccessInfo.style.cursor = 'pointer';
       AccessInfo.style.borderRadius = '12px';
-      AccessInfo.textContent = game.type;
-      AccessInfo.style.fontSize = "12px"
+      AccessInfo.textContent = game.worth;
+      AccessInfo.style.fontSize = "15px"
       AccessInfo.style.backgroundColor = "#008B8B"
+      AccessInfo.style.textDecoration = 'line-through'
       description.textContent = game.description;
       description.id = 'game-description';
       description.className = "descr";
@@ -195,7 +189,7 @@ async function getVideoGames() {
         if (window.innerWidth < 768) {
           card.style.height = "fit-content";
         } else {
-          card.style.height = "500px";
+          card.style.height = "400px";
         }
       }
       adjustCardHeight();
