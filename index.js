@@ -274,7 +274,7 @@ async function EstimateWorth() {
   let NoOfGiveaways = document.getElementById("games-no")
 
   const url = 'https://gamerpower.com/api/worth/'
-  const corsProxyUrl = "https://api.codetabs.com/v1/proxy?quest="
+  const corsProxyUrl = "https://corsproxy.io/?url="
   const finishedUrl = corsProxyUrl + url
 
   try {
