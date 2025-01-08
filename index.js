@@ -273,7 +273,7 @@ async function EstimateWorth() {
   let WorthMessage = document.getElementById("games-worth")
   let NoOfGiveaways = document.getElementById("games-no")
 
-  const url = 'https://gamerpower.com/api/worth/'
+  const url = 'https://gamerpower.com/api/worth'
   const corsProxyUrl = "https://corsproxy.io/?url="
   const finishedUrl = corsProxyUrl + url
 
