@@ -73,7 +73,7 @@ popup2.addEventListener('click', toggleNavbar)
 async function getVideoGames() {
 
 
-  const corsProxyUrl = "https://corsproxy.io/?"
+  const corsProxyUrl = "https://api.codetabs.com/v1/proxy?quest="
   const url = 'https://www.gamerpower.com/api/giveaways'
 
 
@@ -274,7 +274,7 @@ async function EstimateWorth() {
   let NoOfGiveaways = document.getElementById("games-no")
 
   const url = 'https://gamerpower.com/api/worth'
-  const corsProxyUrl = "https://corsproxy.io/?url="
+  const corsProxyUrl = "https://api.codetabs.com/v1/proxy?quest="
   const finishedUrl = corsProxyUrl + url
 
   try {
